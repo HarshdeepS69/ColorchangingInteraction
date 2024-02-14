@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="activity"
+            type="com.harsh.colorchanginginteraction.MainActivity" />
+            <variable
+                name="isShow"
+                type="Boolean" />
+            <import type="android.view.View"/>
+
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,7 +27,6 @@
         android:orientation="horizontal"
         android:layout_margin="10dp"
         >
-
         <Button
             android:backgroundTint="@color/Red"
             android:layout_width="wrap_content"
@@ -42,6 +51,7 @@
             android:text="Blue"
             />
     </LinearLayout>
+
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+        binding.activity = this
         setContentView(binding.root)
         colorViewModel = ViewModelProvider(this)[ColorViewModel::class.java]
 
@@ -34,5 +35,8 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Blue Clicked", Toast.LENGTH_SHORT).show()
         }
 
+    }
+    fun buttonClicked(value : Int){
+        colorViewModel.isSHOW.setValue(value)
     }
 }
